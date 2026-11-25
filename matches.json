@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T09:02:37.672711+00:00",
+ "updated": "2026-11-25T12:47:00.431521+00:00",
  "matches": [
   {
    "id": "20261128-lincoln-city",
@@ -13,8 +13,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 233,
+   "transit_minutes": 310,
    "sales_pdf": "https://www.wolves.co.uk/media/k3ojgaf1/away-info-lincoln-city-v3.pdf"
   },
   {
@@ -29,8 +29,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -45,8 +45,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 98,
+   "transit_minutes": 123,
    "sales_pdf": "https://www.wolves.co.uk/media/ptqpbpeu/away-info-queens-park-rangers.pdf"
   },
   {
@@ -61,8 +61,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 218,
    "sales_pdf": null
   },
   {
@@ -77,8 +77,8 @@
    "info_release": null,
    "first_sale": "2026-11-27T09:00:00+00:00",
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 193,
+   "transit_minutes": 231,
    "sales_pdf": "https://www.wolves.co.uk/media/polgwygb/away-info-norwich-city.pdf"
   },
   {
@@ -93,8 +93,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 247,
    "sales_pdf": null
   },
   {
@@ -109,8 +109,8 @@
    "info_release": null,
    "first_sale": "2026-12-04T09:00:00+00:00",
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 102,
+   "transit_minutes": 137,
    "sales_pdf": "https://www.wolves.co.uk/media/swqjxasv/away-info-watford.pdf"
   },
   {
@@ -125,8 +125,8 @@
    "info_release": null,
    "first_sale": "2026-12-11T09:00:00+00:00",
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 98,
+   "transit_minutes": 96,
    "sales_pdf": "https://www.wolves.co.uk/media/sbblghkz/away-info-millwall.pdf"
   },
   {
@@ -141,8 +141,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 217,
    "sales_pdf": null
   },
   {
@@ -157,8 +157,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 221,
    "sales_pdf": null
   },
   {
@@ -173,8 +173,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 217,
    "sales_pdf": null
   },
   {
@@ -189,8 +189,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 247,
    "sales_pdf": null
   },
   {
@@ -205,8 +205,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 247,
    "sales_pdf": null
   },
   {
@@ -221,8 +221,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 221,
    "sales_pdf": null
   },
   {
@@ -237,8 +237,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 247,
    "sales_pdf": null
   },
   {
@@ -253,8 +253,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 247,
    "sales_pdf": null
   },
   {
@@ -269,8 +269,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 221,
    "sales_pdf": null
   },
   {
@@ -285,8 +285,8 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
-   "drive_minutes": null,
-   "transit_minutes": null,
+   "drive_minutes": 206,
+   "transit_minutes": 247,
    "sales_pdf": null
   }
  ]
