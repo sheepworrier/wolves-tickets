@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wolves Member Tickets</title>
+<meta name="description" content="When Wolves match tickets go on sale to members, with travel times.">
+<style>
+  :root {
+    --gold: #FDB913; --ink: #231F20; --bg: #faf8f3; --card: #ffffff; --muted: #6b6560;
+    --line: #e6e1d8; --ok: #1f7a3a; --warn: #9a6700; --chip: #f1ece2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #f3efe7; --bg: #151313; --card: #1f1c1c; --muted: #a39d95; --line: #34302d;
+      --ok: #5cc27d; --warn: #e3b341; --chip: #2a2625;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #f3efe7; --bg: #151313; --card: #1f1c1c; --muted: #a39d95; --line: #34302d;
+    --ok: #5cc27d; --warn: #e3b341; --chip: #2a2625;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { background: #231F20; color: #fff; border-bottom: 4px solid var(--gold); }
+  header .wrap { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h1 { margin: 0; font-size: 22px; letter-spacing: .3px; }
+  h1 span { color: var(--gold); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  .sub { color: #cfc9c0; font-size: 13px; }
+  form { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px;
+         display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-bottom: 14px; }
+  fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  legend { font-size: 12px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); padding: 0;
+           margin-right: 6px; float: left; }
+  .chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip span { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--chip);
+               border: 1px solid var(--line); cursor: pointer; font-size: 13px; user-select: none; }
+  .chip input:checked + span { background: var(--gold); color: #231F20; border-color: var(--gold); font-weight: 600; }
+  .chip input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+  input[type=time], select { font: inherit; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px;
+                             background: var(--card); color: var(--ink); }
+  button.reset { font: inherit; font-size: 13px; background: none; border: 1px solid var(--line); color: var(--ink);
+                 border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+  .count { color: var(--muted); font-size: 13px; margin: 0 0 8px; }
+  .table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; min-width: 760px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); white-space: nowrap; }
+  th button { all: unset; cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
+  th button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  th[aria-sort] button::after { content: "↕"; opacity: .35; }
+  th[aria-sort="ascending"] button::after { content: "▲"; opacity: 1; color: var(--ink); }
+  th[aria-sort="descending"] button::after { content: "▼"; opacity: 1; color: var(--ink); }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .opp { font-weight: 600; }
+  .ha { display: inline-block; min-width: 22px; text-align: center; font-size: 11px; font-weight: 700; border-radius: 4px;
+        padding: 1px 4px; margin-left: 6px; background: var(--chip); }
+  .ha.h { background: var(--gold); color: #231F20; }
+  .comp { color: var(--muted); font-size: 13px; }
+  .on { color: var(--ok); font-weight: 600; }
+  .none { color: var(--muted); }
+  .tbc { color: var(--warn); }
+  a { color: inherit; }
+  footer { color: var(--muted); font-size: 12px; padding: 14px 0 30px; }
+  @media (max-width: 640px) { h1 { font-size: 19px; } form { gap: 10px 14px; } }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Wolves <span>member tickets</span></h1><div class="sub" id="updated"></div></div></header>
+<main class="wrap">
+  <form id="filters" aria-label="Filters">
+    <fieldset id="days"><legend>Days</legend></fieldset>
+    <fieldset><legend>Kick-off</legend>
+      <label>from <input type="time" id="from" value="00:00"></label>
+      <label>to <input type="time" id="to" value="23:59"></label>
+    </fieldset>
+    <fieldset><legend>Venue</legend>
+      <select id="loc"><option value="">Home &amp; away</option><option value="home">Home</option><option value="away">Away</option></select>
+    </fieldset>
+    <button type="button" class="reset" id="reset">Reset</button>
+  </form>
+  <p class="count" id="count"></p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th scope="col">Match</th>
+        <th scope="col" aria-sort="none" data-key="kickoff"><button type="button">Date &amp; KO</button></th>
+        <th scope="col" aria-sort="none" data-key="drive"><button type="button">Drive</button></th>
+        <th scope="col" aria-sort="none" data-key="transit"><button type="button">Public transport</button></th>
+        <th scope="col" aria-sort="none" data-key="members"><button type="button">On sale to members</button></th>
+        <th scope="col" aria-sort="none" data-key="info"><button type="button">Sale info released</button></th>
+      </tr></thead>
+      <tbody id="rows"><tr><td colspan="6">Loading…</td></tr></tbody>
+    </table>
+  </div>
+  <footer>Sales dates come from wolves.co.uk and are subject to change. Travel times are estimates from home,
+    arriving 45 minutes before kick-off. Click a match to buy.</footer>
+</main>
+<script>
+const DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const DAY_LABEL = { mon: "Mon", tue: "Tue", wed: "Wed", thu: "Thu", fri: "Fri", sat: "Sat", sun: "Sun" };
+const $ = id => document.getElementById(id);
+let matches = [];
+let sort = { key: "kickoff", dir: "asc" };
+
+const ukParts = iso => {
+  const d = new Date(iso);
+  const f = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "short", day: "numeric",
+    month: "short", hour: "2-digit", minute: "2-digit", hour12: false, year: "numeric" }).formatToParts(d);
+  const p = Object.fromEntries(f.map(x => [x.type, x.value]));
+  return { day: p.weekday.toLowerCase().slice(0, 3), time: `${p.hour}:${p.minute}`,
+           text: `${p.weekday} ${p.day} ${p.month} ${p.year !== String(new Date().getFullYear()) ? p.year + " " : ""}${p.hour}:${p.minute}` };
+};
+const mins = m => m == null ? "—" : (m >= 60 ? `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m` : `${m}m`);
+
+function membersCell(m) {
+  if (m.members_status === "on sale") return { html: '<span class="on">On sale now</span>', sortv: "0" };
+  if (m.members_status === "no member sale") return { html: '<span class="none">No member sale</span>', sortv: "~1" };
+  if (m.members_on_sale) return { html: ukParts(m.members_on_sale).text, sortv: m.members_on_sale };
+  return { html: '<span class="tbc">TBC</span>', sortv: "~0" };
+}
+function infoCell(m) {
+  if (m.info_release) return { html: ukParts(m.info_release).text, sortv: m.info_release };
+  if (m.sales_pdf) return { html: `<a href="${m.sales_pdf}" target="_blank" rel="noopener">Released (PDF)</a>`, sortv: "0" };
+  return { html: '<span class="none">—</span>', sortv: "~" };
+}
+const sortValue = (m, key) => ({
+  kickoff: m.kickoff, drive: m.drive_minutes ?? Infinity, transit: m.transit_minutes ?? Infinity,
+  members: membersCell(m).sortv, info: infoCell(m).sortv }[key]);
+
+function readUrl() {
+  const q = new URLSearchParams(location.search);
+  const days = (q.get("days") || "").split(",").filter(d => DAYS.includes(d));
+  document.querySelectorAll("#days input").forEach(i => i.checked = days.length ? days.includes(i.value) : true);
+  const ko = (q.get("ko") || "").split("-");
+  $("from").value = /^\d\d:\d\d$/.test(ko[0]) ? ko[0] : "00:00";
+  $("to").value = /^\d\d:\d\d$/.test(ko[1]) ? ko[1] : "23:59";
+  $("loc").value = ["home", "away"].includes(q.get("loc")) ? q.get("loc") : "";
+  const s = q.get("sort");
+  if (["kickoff", "drive", "transit", "members", "info"].includes(s)) sort = { key: s, dir: q.get("dir") === "desc" ? "desc" : "asc" };
+}
+function writeUrl() {
+  const q = new URLSearchParams();
+  const days = [...document.querySelectorAll("#days input:checked")].map(i => i.value);
+  if (days.length && days.length < 7) q.set("days", days.join(","));
+  if ($("from").value !== "00:00" || $("to").value !== "23:59") q.set("ko", `${$("from").value}-${$("to").value}`);
+  if ($("loc").value) q.set("loc", $("loc").value);
+  if (sort.key !== "kickoff" || sort.dir !== "asc") { q.set("sort", sort.key); q.set("dir", sort.dir); }
+  const qs = q.toString();
+  history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+}
+
+function render() {
+  const days = [...document.querySelectorAll("#days input:checked")].map(i => i.value);
+  const from = $("from").value || "00:00", to = $("to").value || "23:59", loc = $("loc").value;
+  const now = new Date().toISOString();
+  const rows = matches.filter(m => {
+    const p = ukParts(m.kickoff);
+    return m.kickoff > now && days.includes(p.day) && p.time >= from && p.time <= to &&
+           (!loc || (loc === "home") === m.home);
+  }).sort((a, b) => {
+    const x = sortValue(a, sort.key), y = sortValue(b, sort.key);
+    const c = typeof x === "number" ? x - y : String(x).localeCompare(String(y));
+    return (sort.dir === "asc" ? c : -c) || a.kickoff.localeCompare(b.kickoff);
+  });
+  document.querySelectorAll("th[data-key]").forEach(th =>
+    th.setAttribute("aria-sort", th.dataset.key === sort.key ? (sort.dir === "asc" ? "ascending" : "descending") : "none"));
+  $("count").textContent = `${rows.length} of ${matches.filter(m => m.kickoff > now).length} matches`;
+  $("rows").innerHTML = rows.map(m => {
+    const p = ukParts(m.kickoff), mem = membersCell(m), info = infoCell(m);
+    return `<tr>
+      <td><a class="opp" href="${m.buy_url}" target="_blank" rel="noopener">${m.opponent}</a><span class="ha ${m.home ? "h" : ""}">${m.home ? "H" : "A"}</span>
+        <div class="comp">${m.competition}</div></td>
+      <td class="num">${p.text}</td>
+      <td class="num">${mins(m.drive_minutes)}</td>
+      <td class="num">${mins(m.transit_minutes)}</td>
+      <td class="num">${mem.html}</td>
+      <td class="num">${info.html}</td></tr>`;
+  }).join("") || '<tr><td colspan="6">No matches fit these filters.</td></tr>';
+  writeUrl();
+}
+
+DAYS.forEach(d => $("days").insertAdjacentHTML("beforeend",
+  `<label class="chip"><input type="checkbox" value="${d}" checked><span>${DAY_LABEL[d]}</span></label>`));
+document.querySelectorAll("th[data-key] button").forEach(b => b.addEventListener("click", () => {
+  const key = b.parentElement.dataset.key;
+  sort = { key, dir: sort.key === key && sort.dir === "asc" ? "desc" : "asc" };
+  render();
+}));
+$("filters").addEventListener("input", render);
+$("reset").addEventListener("click", () => { history.replaceState(null, "", location.pathname); readUrl(); render(); });
+readUrl();
+fetch("matches.json", { cache: "no-store" }).then(r => r.json()).then(data => {
+  matches = data.matches;
+  $("updated").textContent = `Dates last changed ${ukParts(data.updated).text}`;
+  render();
+}).catch(() => { $("rows").innerHTML = '<tr><td colspan="6">Could not load match data.</td></tr>'; });
+</script>
+</body>
+</html>
