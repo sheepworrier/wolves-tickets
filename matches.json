@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T12:47:00.431521+00:00",
+ "updated": "2026-11-25T12:49:44.469057+00:00",
  "matches": [
   {
    "id": "20261128-lincoln-city",
@@ -146,6 +146,23 @@
    "sales_pdf": null
   },
   {
+   "id": "20270124-cardiff-city",
+   "opponent": "Cardiff City",
+   "home": false,
+   "venue": "Cardiff City Stadium",
+   "competition": "EFL Championship",
+   "kickoff": "2027-01-24T12:00:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 210,
+   "transit_minutes": 328,
+   "sales_pdf": null
+  },
+  {
    "id": "20270127-bristol-city",
    "opponent": "Bristol City",
    "home": true,
@@ -178,6 +195,23 @@
    "sales_pdf": null
   },
   {
+   "id": "20270206-charlton-athletic",
+   "opponent": "Charlton Athletic",
+   "home": false,
+   "venue": "The Valley",
+   "competition": "EFL Championship",
+   "kickoff": "2027-02-06T12:30:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 84,
+   "transit_minutes": 110,
+   "sales_pdf": null
+  },
+  {
    "id": "20270213-sheffield-united",
    "opponent": "Sheffield United",
    "home": true,
@@ -191,6 +225,40 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
    "transit_minutes": 247,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270217-bolton-wanderers",
+   "opponent": "Bolton Wanderers",
+   "home": false,
+   "venue": "Toughsheet Community Stadium",
+   "competition": "EFL Championship",
+   "kickoff": "2027-02-17T19:45:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 276,
+   "transit_minutes": 283,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270220-west-bromwich-albion",
+   "opponent": "West Bromwich Albion",
+   "home": false,
+   "venue": "The Hawthorns",
+   "competition": "EFL Championship",
+   "kickoff": "2027-02-20T12:30:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 185,
+   "transit_minutes": 209,
    "sales_pdf": null
   },
   {
@@ -226,6 +294,23 @@
    "sales_pdf": null
   },
   {
+   "id": "20270306-blackburn-rovers",
+   "opponent": "Blackburn Rovers",
+   "home": false,
+   "venue": "Ewood Park",
+   "competition": "EFL Championship",
+   "kickoff": "2027-03-06T15:00:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 288,
+   "transit_minutes": 314,
+   "sales_pdf": null
+  },
+  {
    "id": "20270313-lincoln-city",
    "opponent": "Lincoln City",
    "home": true,
@@ -242,6 +327,40 @@
    "sales_pdf": null
   },
   {
+   "id": "20270316-southampton",
+   "opponent": "Southampton",
+   "home": false,
+   "venue": "St. Mary's Stadium",
+   "competition": "EFL Championship",
+   "kickoff": "2027-03-16T19:45:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 94,
+   "transit_minutes": 131,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270320-swansea-city",
+   "opponent": "Swansea City",
+   "home": false,
+   "venue": "Swansea.com Stadium",
+   "competition": "EFL Championship",
+   "kickoff": "2027-03-20T15:00:00+00:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 239,
+   "transit_minutes": 345,
+   "sales_pdf": null
+  },
+  {
    "id": "20270403-norwich-city",
    "opponent": "Norwich City",
    "home": true,
@@ -255,6 +374,57 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
    "transit_minutes": 247,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270406-portsmouth",
+   "opponent": "Portsmouth",
+   "home": false,
+   "venue": "Fratton Park",
+   "competition": "EFL Championship",
+   "kickoff": "2027-04-06T19:45:00+01:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 77,
+   "transit_minutes": 100,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270410-birmingham-city",
+   "opponent": "Birmingham City",
+   "home": true,
+   "venue": "Molineux Stadium",
+   "competition": "EFL Championship",
+   "kickoff": "2027-04-10T15:00:00+01:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 206,
+   "transit_minutes": 247,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270417-stoke-city",
+   "opponent": "Stoke City",
+   "home": false,
+   "venue": "bet365 Stadium",
+   "competition": "EFL Championship",
+   "kickoff": "2027-04-17T15:00:00+01:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 230,
+   "transit_minutes": 223,
    "sales_pdf": null
   },
   {
@@ -287,6 +457,23 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
    "transit_minutes": 247,
+   "sales_pdf": null
+  },
+  {
+   "id": "20270501-derby-county",
+   "opponent": "Derby County",
+   "home": false,
+   "venue": "Pride Park",
+   "competition": "EFL Championship",
+   "kickoff": "2027-05-01T12:30:00+01:00",
+   "members_on_sale": null,
+   "members_status": "TBC",
+   "info_release": null,
+   "first_sale": null,
+   "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
+   "source": "fixtures",
+   "drive_minutes": 200,
+   "transit_minutes": 216,
    "sales_pdf": null
   }
  ]
