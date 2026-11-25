@@ -91,7 +91,7 @@
         <th scope="col" aria-sort="none" data-key="drive"><button type="button">Drive</button></th>
         <th scope="col" aria-sort="none" data-key="transit"><button type="button">Public transport</button></th>
         <th scope="col" aria-sort="none" data-key="members"><button type="button">On sale to members</button></th>
-        <th scope="col" aria-sort="none" data-key="info"><button type="button">Sale info released</button></th>
+        <th scope="col" aria-sort="none" data-key="info"><button type="button">Sale info</button></th>
       </tr></thead>
       <tbody id="rows"><tr><td colspan="6">Loading…</td></tr></tbody>
     </table>
@@ -122,9 +122,21 @@ function membersCell(m) {
   if (m.members_on_sale) return { html: ukParts(m.members_on_sale).text, sortv: m.members_on_sale };
   return { html: '<span class="tbc">TBC</span>', sortv: "~0" };
 }
+// Away: once released, the members' date from the sales PDF, linking to that PDF; before that, the
+// release date. Home: sale details are on the club page itself, so show the members' date or on-sale.
 function infoCell(m) {
-  if (m.info_release) return { html: ukParts(m.info_release).text, sortv: m.info_release };
-  if (m.sales_pdf) return { html: `<a href="${m.sales_pdf}" target="_blank" rel="noopener">Released (PDF)</a>`, sortv: "0" };
+  const mem = membersCell(m);
+  if (m.sales_pdf) {
+    const text = m.members_status === "on sale" ? "On sale now" : m.members_status === "no member sale" ? "No member sale"
+      : m.members_on_sale ? ukParts(m.members_on_sale).text : "Sales info";
+    return { html: `<a href="${m.sales_pdf}" target="_blank" rel="noopener" title="Away sales information (PDF)">${text}</a>`,
+             sortv: mem.sortv };
+  }
+  if (m.info_release && m.members_status === "TBC")
+    return { html: `<span class="tbc">Info from ${ukParts(m.info_release).text}</span>`, sortv: "1" + m.info_release };
+  if (m.home && m.members_status === "on sale")
+    return { html: `<a class="on" href="${m.buy_url}" target="_blank" rel="noopener">On sale now</a>`, sortv: mem.sortv };
+  if (m.home) return { html: mem.html, sortv: mem.sortv };
   return { html: '<span class="none">—</span>', sortv: "~" };
 }
 const sortValue = (m, key) => ({
