@@ -163,7 +163,7 @@ function render() {
            (!loc || (loc === "home") === m.home);
   }).sort((a, b) => {
     const x = sortValue(a, sort.key), y = sortValue(b, sort.key);
-    const c = typeof x === "number" ? x - y : String(x).localeCompare(String(y));
+    const c = typeof x === "number" ? x - y : (x < y ? -1 : x > y ? 1 : 0);  // code-point order keeps "~" blanks last
     return (sort.dir === "asc" ? c : -c) || a.kickoff.localeCompare(b.kickoff);
   });
   document.querySelectorAll("th[data-key]").forEach(th =>
