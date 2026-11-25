@@ -116,29 +116,29 @@ const ukParts = iso => {
 };
 const mins = m => m == null ? "—" : (m >= 60 ? `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m` : `${m}m`);
 
+// On sale to members: on sale now (links to the club's buy page), the members' date (home: from the
+// club page; away and cups: from the sales PDF), "No member sale", or TBC until it's known.
 function membersCell(m) {
-  if (m.members_status === "on sale") return { html: '<span class="on">On sale now</span>', sortv: "0" };
+  if (m.members_status === "on sale")
+    return { html: `<a class="on" href="${m.buy_url}" target="_blank" rel="noopener">On sale now</a>`, sortv: "0" };
   if (m.members_status === "no member sale") return { html: '<span class="none">No member sale</span>', sortv: "~1" };
   if (m.members_on_sale) return { html: ukParts(m.members_on_sale).text, sortv: m.members_on_sale };
   return { html: '<span class="tbc">TBC</span>', sortv: "~0" };
 }
-// Away: once released, the members' date from the sales PDF, linking to that PDF; before that, the
-// release date. Home: sale details are on the club page itself, so show the members' date or on-sale.
+// Sale info: is the sales information out yet?
+//  - away (and cup) games: "Available" once the sales PDF is out (links to it), else the release date
+//  - home league games: available from the start of the season (links to the club's ticket page)
+//  - fixtures not on the club's ticket page yet: TBC
 function infoCell(m) {
-  const mem = membersCell(m);
-  if (m.sales_pdf) {
-    const text = m.members_status === "on sale" ? "On sale now" : m.members_status === "no member sale" ? "No member sale"
-      : m.members_on_sale ? ukParts(m.members_on_sale).text : "Sales info";
-    return { html: `<a href="${m.sales_pdf}" target="_blank" rel="noopener" title="Away sales information (PDF)">${text}</a>`,
-             sortv: mem.sortv };
-  }
-  if (m.info_release && m.members_status === "TBC")
-    return { html: `<span class="tbc">Info from ${ukParts(m.info_release).text}</span>`, sortv: "1" + m.info_release };
-  if (m.home && m.members_status === "on sale")
-    return { html: `<a class="on" href="${m.buy_url}" target="_blank" rel="noopener">On sale now</a>`, sortv: mem.sortv };
-  if (m.source === "fixtures") return { html: '<span class="none">Not announced yet</span>', sortv: "~0" };
-  if (m.home) return { html: mem.html, sortv: mem.sortv };
-  return { html: '<span class="none">—</span>', sortv: "~" };
+  if (m.sales_pdf)
+    return { html: `<a class="on" href="${m.sales_pdf}" target="_blank" rel="noopener" title="Sales information (PDF)">Available</a>`,
+             sortv: "0" };
+  if (m.info_release)
+    return { html: `<span class="tbc">From ${ukParts(m.info_release).text}</span>`, sortv: "1" + m.info_release };
+  if (m.source !== "fixtures" && m.home && (m.members_on_sale || m.members_status === "on sale"))
+    return { html: `<a class="on" href="https://www.wolves.co.uk/tickets-hospitality/" target="_blank" rel="noopener">Available</a>`,
+             sortv: "0" };
+  return { html: '<span class="tbc">TBC</span>', sortv: "~" };
 }
 const sortValue = (m, key) => ({
   kickoff: m.kickoff, drive: m.drive_minutes ?? Infinity, transit: m.transit_minutes ?? Infinity,
