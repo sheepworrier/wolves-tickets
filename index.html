@@ -136,6 +136,7 @@ function infoCell(m) {
     return { html: `<span class="tbc">Info from ${ukParts(m.info_release).text}</span>`, sortv: "1" + m.info_release };
   if (m.home && m.members_status === "on sale")
     return { html: `<a class="on" href="${m.buy_url}" target="_blank" rel="noopener">On sale now</a>`, sortv: mem.sortv };
+  if (m.source === "fixtures") return { html: '<span class="none">Not announced yet</span>', sortv: "~0" };
   if (m.home) return { html: mem.html, sortv: mem.sortv };
   return { html: '<span class="none">—</span>', sortv: "~" };
 }
