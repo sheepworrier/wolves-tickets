@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T12:49:44.469057+00:00",
+ "updated": "2026-11-26T09:13:49.619442+00:00",
  "matches": [
   {
    "id": "20261128-lincoln-city",
@@ -41,7 +41,7 @@
    "competition": "EFL Championship",
    "kickoff": "2026-12-08T19:45:00+00:00",
    "members_on_sale": "2026-11-26T09:00:00+00:00",
-   "members_status": "scheduled",
+   "members_status": "on sale",
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
@@ -57,7 +57,7 @@
    "competition": "EFL Championship",
    "kickoff": "2026-12-12T15:00:00+00:00",
    "members_on_sale": null,
-   "members_status": "on sale",
+   "members_status": "TBC",
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
