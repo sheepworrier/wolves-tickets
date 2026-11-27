@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T09:13:49.619442+00:00",
+ "updated": "2026-11-27T09:07:42.739264+00:00",
  "matches": [
   {
    "id": "20261128-lincoln-city",
@@ -75,7 +75,7 @@
    "members_on_sale": "2026-12-11T09:00:00+00:00",
    "members_status": "scheduled",
    "info_release": null,
-   "first_sale": "2026-11-27T09:00:00+00:00",
+   "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "drive_minutes": 193,
    "transit_minutes": 231,
