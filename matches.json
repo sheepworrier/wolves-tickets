@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-27T09:17:46.849793+00:00",
+ "updated": "2026-11-27T18:20:29.406847+00:00",
  "matches": [
   {
    "id": "20261128-lincoln-city",
    "opponent": "Lincoln City",
    "home": false,
-   "venue": "LNER Stadium",
+   "venue": "ProAmpac Stadium",
    "competition": "EFL Championship",
    "kickoff": "2026-11-28T12:30:00+00:00",
    "members_on_sale": null,
@@ -13,7 +13,7 @@
    "info_release": null,
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
-   "drive_minutes": 233,
+   "drive_minutes": 240,
    "transit_minutes": 310,
    "sales_pdf": "https://www.wolves.co.uk/media/k3ojgaf1/away-info-lincoln-city-v3.pdf"
   },
