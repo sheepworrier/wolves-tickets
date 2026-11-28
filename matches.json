@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T18:20:29.406847+00:00",
+ "updated": "2026-11-28T09:23:37.243226+00:00",
  "matches": [
   {
    "id": "20261128-lincoln-city",
@@ -94,7 +94,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -142,7 +142,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 217,
+   "transit_minutes": 231,
    "sales_pdf": null
   },
   {
@@ -191,7 +191,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 217,
+   "transit_minutes": 231,
    "sales_pdf": null
   },
   {
@@ -208,7 +208,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "source": "fixtures",
    "drive_minutes": 84,
-   "transit_minutes": 110,
+   "transit_minutes": 107,
    "sales_pdf": null
   },
   {
@@ -224,7 +224,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -258,7 +258,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "source": "fixtures",
    "drive_minutes": 185,
-   "transit_minutes": 209,
+   "transit_minutes": 223,
    "sales_pdf": null
   },
   {
@@ -274,7 +274,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -307,7 +307,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "source": "fixtures",
    "drive_minutes": 288,
-   "transit_minutes": 314,
+   "transit_minutes": 281,
    "sales_pdf": null
   },
   {
@@ -323,7 +323,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -357,7 +357,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "source": "fixtures",
    "drive_minutes": 239,
-   "transit_minutes": 345,
+   "transit_minutes": 317,
    "sales_pdf": null
   },
   {
@@ -373,7 +373,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -407,7 +407,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "source": "fixtures",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -424,7 +424,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "source": "fixtures",
    "drive_minutes": 230,
-   "transit_minutes": 223,
+   "transit_minutes": 225,
    "sales_pdf": null
   },
   {
@@ -456,7 +456,7 @@
    "first_sale": null,
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=1&preFilterName=Home%20Matches",
    "drive_minutes": 206,
-   "transit_minutes": 247,
+   "transit_minutes": 232,
    "sales_pdf": null
   },
   {
@@ -473,7 +473,7 @@
    "buy_url": "https://www.eticketing.co.uk/wolves/Events?preFilter=3&preFilterName=Away%20Matches",
    "source": "fixtures",
    "drive_minutes": 200,
-   "transit_minutes": 216,
+   "transit_minutes": 222,
    "sales_pdf": null
   }
  ]
